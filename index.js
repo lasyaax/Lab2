@@ -72,6 +72,24 @@ initializeDBAndServer();
 // CRUD Routes
 // ---------------------------
 
+// Root route for cloud deployment health check and quick navigation
+app.get("/", (request, response) => {
+  response.send(`
+    <div style="font-family: sans-serif; padding: 24px; line-height: 1.6;">
+      <h2>🚀 Lab 2: SQLite Database & CRUD Routes API</h2>
+      <p>Server is up and running!</p>
+      <h3>Available Endpoints:</h3>
+      <ul>
+        <li><a href="/books/"><code>GET /books/</code></a> - Retrieve all books</li>
+        <li><code>GET /books/:bookId/</code> - Retrieve single book (e.g. <a href="/books/1/">/books/1/</a>)</li>
+        <li><code>POST /books/</code> - Add a new book</li>
+        <li><code>PUT /books/:bookId/</code> - Update a book</li>
+        <li><code>DELETE /books/:bookId/</code> - Remove a book</li>
+      </ul>
+    </div>
+  `);
+});
+
 // 1. GET /books/ - Get all books
 app.get("/books/", async (request, response) => {
   try {
