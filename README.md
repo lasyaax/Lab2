@@ -2,6 +2,8 @@
 
 **Name:** [Your Name Here] · **Registration Number:** [Your Reg. No.] · **Section:** [Your Section]
 
+**GitHub Repository:** https://github.com/lasyaax/Lab2
+
 **Live Link:** [Deployed URL on Render / Railway, or `Not deployed (local SQLite database - see Postman screenshots below)`]
 
 ---
@@ -15,9 +17,10 @@
 - **Postman** (for testing HTTP CRUD routes)
 
 ### 2. Installation
-Clone your repository and navigate to the `lab-02` directory:
+Clone your repository:
 ```bash
-cd lab-02
+git clone https://github.com/lasyaax/Lab2.git
+cd Lab2
 npm install
 ```
 
